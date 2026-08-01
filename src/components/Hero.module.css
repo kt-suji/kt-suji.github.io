@@ -1,0 +1,98 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-height);
+  background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.05), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(26, 35, 50, 0.03), transparent 40%);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.greeting {
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.name {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.gradientText {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.primaryBtn, .secondaryBtn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.primaryBtn {
+  background-color: var(--color-primary);
+  color: white;
+  border: 1px solid var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.primaryBtn:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.secondaryBtn {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.secondaryBtn:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(26, 35, 50, 0.05);
+}
+
+@media (max-width: 600px) {
+  .actions {
+    flex-direction: column;
+  }
+  .primaryBtn, .secondaryBtn {
+    text-align: center;
+    width: 100%;
+  }
+}
