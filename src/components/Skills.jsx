@@ -33,6 +33,7 @@ const skillCategories = [
     icon: '⚙️',
     skills: [
       'React',
+      'React Native',
       'Vue',
       'Laravel',
       'Node.js',
