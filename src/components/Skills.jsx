@@ -2,26 +2,22 @@ import styles from './Skills.module.css';
 
 const skillCategories = [
   {
-    title: 'Networking',
-    icon: '🌐',
-    skills: [
-      'iSCSI',
-      'PXE / iPXE Boot',
-      'Network Boot',
-      'NFS / SMB',
-      'ZFS Network Storage',
-      'Reverse Proxy',
-      'Nginx',
-    ]
-  },
-  {
-    title: 'Server & Infrastructure',
-    icon: '🖥️',
+    title: 'Infrastructure',
+    icon: '🏗️',
     skills: [
       'Linux',
-      'Nginx',
       'Docker',
-      'Proxmox VE',
+      'KVM',
+      'TCP/IP',
+      'VLAN',
+      'PXE / iPXE Boot',
+      'iSCSI',
+      'ZFS',
+      'NFS / SMB',
+      'Network Storage',
+      'Nginx',
+      'Reverse Proxy',
+      'Cloudflare Tunnel',
     ]
   },
   {
