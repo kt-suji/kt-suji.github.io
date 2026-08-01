@@ -8,16 +8,11 @@ const skillCategories = [
       'Linux',
       'Docker',
       'KVM',
-      'TCP/IP',
-      'VLAN',
       'PXE / iPXE Boot',
       'iSCSI',
       'ZFS',
       'NFS / SMB',
-      'Network Storage',
       'Nginx',
-      'Reverse Proxy',
-      'Cloudflare Tunnel',
     ]
   },
   {
