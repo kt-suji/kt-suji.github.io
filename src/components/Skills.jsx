@@ -5,12 +5,13 @@ const skillCategories = [
     title: 'Networking',
     icon: '🌐',
     skills: [
-      'Cisco IOS (OSPF / VLAN / ACL)',
-      'NAT / DHCP / DNS',
-      'Wireshark',
-      'パケット解析',
-      'Cloudflare',
-      'TCP/IP',
+      'iSCSI',
+      'PXE / iPXE Boot',
+      'Network Boot',
+      'NFS / SMB',
+      'ZFS Network Storage',
+      'Reverse Proxy',
+      'Nginx',
     ]
   },
   {
