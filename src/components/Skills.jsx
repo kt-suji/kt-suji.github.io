@@ -5,8 +5,8 @@ const skillCategories = [
     title: 'Networking',
     icon: '🌐',
     skills: [
-      { name: 'Cisco IOS (OSPF / VLAN / ACL)', level: 70 },
       { name: 'NAT / DHCP / DNS', level: 75 },
+      { name: 'Cisco IOS (OSPF / VLAN / ACL)', level: 70 },
       { name: 'Wireshark / パケット解析', level: 70 },
       { name: 'Cloudflare', level: 55 },
     ]
@@ -25,11 +25,11 @@ const skillCategories = [
     title: 'Development',
     icon: '💻',
     skills: [
+      { name: 'Git / GitHub', level: 75 },
       { name: 'Python', level: 65 },
       { name: 'JavaScript / TypeScript', level: 60 },
-      { name: 'Java', level: 55 },
       { name: 'SQL (MySQL)', level: 60 },
-      { name: 'Git / GitHub', level: 75 },
+      { name: 'Java', level: 55 },
     ]
   }
 ];
