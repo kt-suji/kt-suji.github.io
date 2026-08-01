@@ -24,6 +24,9 @@ const skillCategories = [
       'JavaScript',
       'PHP',
       'Java',
+      'C++',
+      'C#',
+      'Kotlin',
       'Dart',
       'Python',
     ]
