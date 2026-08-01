@@ -5,31 +5,34 @@ const skillCategories = [
     title: 'Networking',
     icon: '🌐',
     skills: [
-      { name: 'NAT / DHCP / DNS', level: 75 },
-      { name: 'Cisco IOS (OSPF / VLAN / ACL)', level: 70 },
-      { name: 'Wireshark / パケット解析', level: 70 },
-      { name: 'Cloudflare', level: 55 },
+      'Cisco IOS (OSPF / VLAN / ACL)',
+      'NAT / DHCP / DNS',
+      'Wireshark',
+      'パケット解析',
+      'Cloudflare',
+      'TCP/IP',
     ]
   },
   {
     title: 'Server & Infrastructure',
     icon: '🖥️',
     skills: [
-      { name: 'Linux', level: 75 },
-      { name: 'Nginx', level: 65 },
-      { name: 'Docker', level: 65 },
-      { name: 'Proxmox VE', level: 60 },
+      'Linux',
+      'Nginx',
+      'Docker',
+      'Proxmox VE',
     ]
   },
   {
     title: 'Development',
     icon: '💻',
     skills: [
-      { name: 'Git / GitHub', level: 75 },
-      { name: 'Python', level: 65 },
-      { name: 'JavaScript / TypeScript', level: 60 },
-      { name: 'SQL (MySQL)', level: 60 },
-      { name: 'Java', level: 55 },
+      'Python',
+      'JavaScript',
+      'TypeScript',
+      'Java',
+      'SQL (MySQL)',
+      'Git / GitHub',
     ]
   }
 ];
@@ -48,20 +51,11 @@ export default function Skills() {
                 <h3>{category.title}</h3>
               </div>
               
-              <div className={styles.skillList}>
+              <div className={styles.tagList}>
                 {category.skills.map((skill, sIdx) => (
-                  <div key={sIdx} className={styles.skillItem}>
-                    <div className={styles.skillInfo}>
-                      <span className={styles.skillName}>{skill.name}</span>
-                      <span className={styles.skillLevel}>{skill.level}%</span>
-                    </div>
-                    <div className={styles.progressBar}>
-                      <div 
-                        className={styles.progressFill} 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
+                  <span key={sIdx} className={styles.tag}>
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
