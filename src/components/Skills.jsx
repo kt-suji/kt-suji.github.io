@@ -21,15 +21,27 @@ const skillCategories = [
     ]
   },
   {
-    title: 'Development',
-    icon: '💻',
+    title: 'Language',
+    icon: '📝',
     skills: [
-      'Python',
+      'HTML',
+      'CSS',
       'JavaScript',
-      'TypeScript',
+      'PHP',
       'Java',
-      'SQL (MySQL)',
-      'Git / GitHub',
+      'Dart',
+      'Python',
+    ]
+  },
+  {
+    title: 'Framework & Runtime',
+    icon: '⚙️',
+    skills: [
+      'React',
+      'Vue',
+      'Laravel',
+      'Node.js',
+      'Flutter',
     ]
   }
 ];
