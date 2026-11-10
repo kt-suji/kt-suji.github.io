@@ -1,0 +1,51 @@
+.workspace {
+  padding: clamp(24px, 3.5vw, 40px) clamp(20px, 3.5vw, 44px) 48px;
+  max-width: 820px;
+  width: 100%;
+}
+
+.topBar {
+  margin-bottom: 26px;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.lead {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+.groups {
+  border-top: 1px solid var(--rule-strong);
+}
+
+.group {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule-default);
+}
+
+.groupTitle {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.items {
+  font-size: 0.94rem;
+  line-height: 2.1;
+  color: var(--ink-primary);
+}
+
+@media (max-width: 720px) {
+  .group {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

@@ -1,0 +1,95 @@
+.frame {
+  border: 1px solid var(--rule-default);
+  background-color: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+}
+
+.canvas {
+  padding: 10px 10px 6px;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.clickableNode {
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.dimmedNode {
+  opacity: 0.45;
+}
+
+.nodeTitle {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  fill: #171716;
+}
+
+.nodeTitleAccent {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  fill: #1B4965;
+}
+
+.badgeText {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 9.8px;
+  font-weight: 500;
+  fill: #1B4965;
+}
+
+.nodeBody {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 10.6px;
+  fill: #33322F;
+}
+
+.nodeSub {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 10.2px;
+  fill: #52504B;
+}
+
+.edgeLabel {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 9.8px;
+  fill: #5E5C55;
+}
+
+.captionFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 14px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+}
+
+.legendLeft {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legendSwatch {
+  width: 10px;
+  height: 10px;
+  background-color: #E8F0F4;
+  border: 1px solid #1B4965;
+  flex-shrink: 0;
+}
+
+.resetBtn {
+  font-size: 0.74rem;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}

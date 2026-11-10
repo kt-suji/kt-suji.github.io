@@ -1,0 +1,24 @@
+.shell {
+  display: grid;
+  grid-template-columns: var(--spine-width) minmax(0, 1fr);
+  min-height: 100dvh;
+}
+
+.stage {
+  min-width: 0;
+  background-color: var(--bg-paper);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 960px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+}

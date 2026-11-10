@@ -1,0 +1,231 @@
+.spine {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow-y: auto;
+  background-color: var(--spine-bg);
+  color: var(--spine-ink);
+  border-right: 1px solid var(--rule-strong);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 34px 26px 56px;
+  gap: 28px;
+}
+
+.topGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.identityBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.gradText {
+  font-size: 0.76rem;
+  color: var(--spine-muted);
+  margin-bottom: 8px;
+}
+
+.nameLink {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.name {
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  line-height: 1.25;
+  color: var(--spine-ink);
+}
+
+.role {
+  font-size: 0.84rem;
+  color: var(--spine-secondary);
+  margin-bottom: 18px;
+}
+
+.schoolText {
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--spine-muted);
+  padding-left: 12px;
+  border-left: 2px solid #445860;
+  margin-bottom: 16px;
+}
+
+.majorStrong {
+  color: var(--spine-secondary);
+}
+
+.summary {
+  font-size: 0.82rem;
+  line-height: 1.8;
+  color: var(--spine-muted);
+}
+
+.nav {
+  border-top: 1px solid var(--spine-rule);
+  padding-top: 16px;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navLink {
+  display: block;
+  padding: 9px 12px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--spine-muted);
+  border-left: 2px solid transparent;
+  transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--spine-ink);
+  background-color: var(--spine-surface);
+}
+
+.navLinkActive {
+  color: var(--spine-ink);
+  font-weight: 600;
+  background-color: var(--spine-surface);
+  border-left-color: var(--spine-accent);
+}
+
+.contactBlock {
+  border-top: 1px solid var(--spine-rule);
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emailAddr {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  color: var(--spine-secondary);
+  word-break: break-all;
+}
+
+.contactActions {
+  display: flex;
+  gap: 8px;
+}
+
+.copyBtn,
+.mailBtn {
+  padding: 5px 11px;
+  font-size: 0.76rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid #383B36;
+  background-color: var(--spine-surface);
+  color: var(--spine-secondary);
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.copyBtn:hover,
+.mailBtn:hover {
+  color: var(--spine-ink);
+  border-color: var(--spine-muted);
+}
+
+.copyBtnDone {
+  background-color: #1F4350;
+  border-color: var(--spine-accent);
+  color: #FFFFFF;
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--spine-muted);
+  width: fit-content;
+  margin-top: 2px;
+  transition: color var(--transition-fast);
+}
+
+.githubLink:hover {
+  color: var(--spine-ink);
+}
+
+@media (max-width: 960px) {
+  .spine {
+    position: static;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--rule-strong);
+    padding: 20px 20px 16px;
+    gap: 16px;
+  }
+
+  .topGroup {
+    gap: 16px;
+  }
+
+  .summary {
+    display: none;
+  }
+
+  .schoolText {
+    margin-bottom: 0;
+  }
+
+  .nav {
+    padding-top: 12px;
+  }
+
+  .navList {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .navLink {
+    text-align: center;
+    padding: 8px 6px;
+    font-size: 0.84rem;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    background-color: var(--spine-surface);
+  }
+
+  .navLinkActive {
+    border-bottom-color: var(--spine-accent);
+  }
+
+  .contactBlock {
+    padding-top: 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media print {
+  .spine {
+    position: static;
+    height: auto;
+    background-color: #FFFFFF;
+    color: #171716;
+    border-right: none;
+    border-bottom: 2px solid #171716;
+    padding: 12px 0;
+  }
+
+  .nav,
+  .contactActions {
+    display: none;
+  }
+}

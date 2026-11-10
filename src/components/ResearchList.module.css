@@ -1,0 +1,128 @@
+.workspace {
+  padding: clamp(24px, 3.5vw, 40px) clamp(20px, 3.5vw, 44px) 56px;
+  max-width: 860px;
+  width: 100%;
+}
+
+.topBar {
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.lead {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+.empty {
+  padding: 24px 0;
+  border-top: 1px solid var(--rule-strong);
+  color: var(--ink-muted);
+  font-size: 0.9rem;
+}
+
+.list {
+  border-top: 1px solid var(--rule-strong);
+}
+
+.item {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule-default);
+}
+
+.period {
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  margin-bottom: 3px;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+.summary {
+  font-size: 0.9rem;
+  color: var(--ink-secondary);
+  margin-bottom: 10px;
+}
+
+.p {
+  font-size: 0.92rem;
+  line-height: 1.95;
+  color: var(--ink-secondary);
+}
+
+.p + .p {
+  margin-top: 10px;
+}
+
+.findings {
+  margin-top: 12px;
+  padding-left: 18px;
+  list-style: disc;
+  font-size: 0.9rem;
+  line-height: 1.85;
+}
+
+.links {
+  margin-top: 12px;
+  display: flex;
+  gap: 14px;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.sections {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subSection {
+  padding-top: 4px;
+}
+
+.subHeading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink-primary);
+  margin-bottom: 6px;
+  padding-left: 8px;
+  border-left: 3px solid var(--accent);
+  line-height: 1.4;
+}
+
+.pointsList {
+  margin-top: 6px;
+  padding-left: 18px;
+  list-style: disc;
+  font-size: 0.88rem;
+  line-height: 1.85;
+  color: var(--ink-secondary);
+}
+
+.pointsList li + li {
+  margin-top: 4px;
+}
+
+.commandBlock {
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  overflow-x: auto;
+}
