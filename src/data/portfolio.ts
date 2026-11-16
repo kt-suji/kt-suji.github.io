@@ -114,12 +114,13 @@ export const WORKS_DATA: WorkItem[] = [
     title: 'SpareLink ― P2P分散余剰計算資源コーディネーター',
     period: '2026年',
     context: '個人開発',
-    role: '全体設計・エージェント実装・Webフロントエンド',
+    role: '個人開発（全体設計・エージェント実装・Webフロントエンド・実機検証）',
     description:
       '自宅や研究室にある複数台のPCをTailscale、WireGuard、ローカルLANでP2P接続し、各PCの「実効余剰能力（CPU・メモリ）」をリアルタイムに評価・集約する分散コーディネーターです。単なる使用率の逆数ではなく、各PCのアーキテクチャ性能や安全マージンを考慮して余剰スコアを算出。外部ソフト（Blenderの分散レンダリングやバッチ処理等）へWebSocket API経由で計算資源を提供します。',
     story: [
       '複数のマシンを運用している中で、メイン機で重い処理をしていてもサブ機のCPUやメモリは遊んでいることが多い点に着目しました。',
       '「余っている計算力を無駄なく使いたいが、ホストPCの操作感を損なったり、サブPCごとに重いランタイムを入れるのは避けたい」と考え、Windows Native APIから直接システム情報を取得する単独バイナリ（ゼロ依存）のエージェントをRustで設計・実装しました。',
+      '外部ソフトウェア（拡張機能・連携クライアント）からWebSocket API経由でクラスタの余剰計算資源を取得し、タスクを動的配分する実機動作も確認完了。これにより「快適性を維持したまま真の余剰能力を集約・活用する」という当初の目標を達成しました。',
     ],
     points: [
       '単独exe・外部ランタイム不要（Windows Native API直接呼び出しによる低負荷プローブ）',
@@ -127,8 +128,9 @@ export const WORKS_DATA: WorkItem[] = [
       'CPU 20%、メモリ 4GBの安全マージンを確保し、操作快適性を維持した実効余剰スコア算出',
       'Tailscale / WireGuard の自動検出によるゼロコンフィグP2Pメッシュ接続',
       '外部連携用 WebSocket API（ポート3001）と、React 19製リアルタイムトポロジーダッシュボード',
+      '外部拡張機能による実動作検証を完了し、当初の開発目標を達成',
     ],
-    tags: ['Rust', 'React', 'TypeScript', 'P2P', 'Tailscale', 'WebSocket'],
+    tags: ['Rust', 'React', 'TypeScript', 'P2P', 'Tailscale', 'WebSocket', '個人開発'],
     githubUrl: 'https://github.com/kt-suji/SpareLink',
     repoLabel: 'kt-suji/SpareLink',
     diagramKind: 'sparelink',
