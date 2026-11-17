@@ -8,6 +8,13 @@ export interface WorkLayer {
   isPrimaryScope?: boolean;
 }
 
+export interface WorkScreenshot {
+  url: string;
+  caption: string;
+  alt: string;
+  description?: string;
+}
+
 /**
  * 制作物を増やすときは WORKS_DATA に1件追加するだけ。
  * 構成図（diagramKind）と layers は無くても表示できる。
@@ -28,6 +35,7 @@ export interface WorkItem {
   repoLabel?: string;
   diagramKind?: DiagramKind;
   layers?: WorkLayer[];
+  screenshots?: WorkScreenshot[];
 }
 
 export interface ResearchSection {
@@ -230,6 +238,20 @@ export const WORKS_DATA: WorkItem[] = [
     githubUrl: 'https://github.com/kt-suji/Webapp',
     repoLabel: 'kt-suji/Webapp',
     diagramKind: 'diagnostic',
+    screenshots: [
+      {
+        url: '/works/pc-trouble-diagnostic/question.png',
+        caption: '質問画面（2択の分岐）',
+        alt: '質問画面：「問題の起きたパソコンは？（タブレット型非対応）」と「ノート」「デスクトップ」の2択選択肢',
+        description: '「ノートかデスクトップか」「電源が入るか」など、専門知識がなくても答えられるYes/No形式の2択でトラブルの症状を絞り込んでいきます。',
+      },
+      {
+        url: '/works/pc-trouble-diagnostic/result.png',
+        caption: '診断結果画面（原因特定と解決策の提示）',
+        alt: '診断結果画面：「予想された原因:電源周りの問題」とイラスト、3つの解決案',
+        description: '分岐の終着点で、予想される不調原因（電源周り、配線、パーツ故障等）と具体的な対処手順（解決案1〜3）をイラスト付きで分かりやすく提示します。',
+      },
+    ],
     layers: [
       {
         nodeKey: 'browser',

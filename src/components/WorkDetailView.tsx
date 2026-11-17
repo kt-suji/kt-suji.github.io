@@ -69,6 +69,42 @@ export default function WorkDetailView({ work, prev, next }: Props) {
           </ul>
         </section>
 
+        {work.screenshots && work.screenshots.length > 0 && (
+          <section className={styles.section}>
+            <h2 className={styles.h2}>実際の画面</h2>
+            <p className={styles.hint}>画像をクリックすると別タブで拡大表示できます。</p>
+            <div className={styles.screenshotsGrid}>
+              {work.screenshots.map((shot, idx) => (
+                <div key={idx} className={styles.screenshotCard}>
+                  <a
+                    href={shot.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.screenshotLink}
+                    title="クリックして原寸大で表示"
+                  >
+                    <div className={styles.screenshotMedia}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={shot.url}
+                        alt={shot.alt}
+                        className={styles.screenshotImg}
+                        loading="lazy"
+                      />
+                    </div>
+                  </a>
+                  <div className={styles.screenshotMeta}>
+                    <h3 className={styles.screenshotCaption}>{shot.caption}</h3>
+                    {shot.description && (
+                      <p className={styles.screenshotDesc}>{shot.description}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {work.diagramKind && (
           <section className={styles.section}>
             <h2 className={styles.h2}>構成</h2>
