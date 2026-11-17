@@ -147,20 +147,27 @@ export default function ArchitectureDiagram({
               </marker>
             </defs>
 
-            <g {...getGroupProps('flutter')}>
-              <rect x="16" y="14" width="388" height="52" {...getRectStyle('flutter', true)} />
-              <text x="28" y="34" className={styles.nodeTitleAccent}>モバイルアプリ（Flutter / Dart）</text>
-              <text x="28" y="53" className={styles.nodeBody}>ページ送り付きファイル一覧・アップロード・共有</text>
+            <g {...getGroupProps('clients')}>
+              <rect x="16" y="14" width="184" height="52" {...getRectStyle('clients', true)} />
+              <text x="26" y="34" className={styles.nodeTitleAccent}>Webブラウザ</text>
+              <text x="26" y="53" className={styles.nodeSub}>一覧閲覧・アップロード・共有</text>
+
+              <rect x="220" y="14" width="184" height="52" {...getRectStyle('clients', true)} />
+              <text x="230" y="34" className={styles.nodeTitleAccent}>スマホ（Flutter / Web）</text>
+              <text x="230" y="53" className={styles.nodeSub}>PHP経由でファイル情報取得</text>
             </g>
 
-            <line x1="210" y1="69" x2="210" y2="99" stroke="#595751" strokeWidth="1" markerStart="url(#arrow-fs)" markerEnd="url(#arrow-fs)" />
-            <text x="218" y="88" className={styles.edgeLabel}>REST API（APIキー認証）</text>
+            <line x1="108" y1="69" x2="108" y2="99" stroke="#595751" strokeWidth="1" markerStart="url(#arrow-fs)" markerEnd="url(#arrow-fs)" />
+            <text x="116" y="88" className={styles.edgeLabel}>Webアクセス</text>
+
+            <line x1="312" y1="69" x2="312" y2="99" stroke="#595751" strokeWidth="1" markerStart="url(#arrow-fs)" markerEnd="url(#arrow-fs)" />
+            <text x="304" y="88" textAnchor="end" className={styles.edgeLabel}>REST API（PHP）</text>
 
             <g {...getGroupProps('laravel')}>
               <rect x="16" y="102" width="388" height="62" {...getRectStyle('laravel', true)} />
-              <text x="28" y="123" className={styles.nodeTitleAccent}>バックエンドAPI（Laravel / PHP）</text>
+              <text x="28" y="123" className={styles.nodeTitleAccent}>Web ＆ バックエンドAPI（Laravel / PHP）</text>
               <text x="392" y="123" textAnchor="end" className={styles.badgeText}>v1から作り直し</text>
-              <text x="28" y="146" className={styles.nodeBody}>APIキー確認・ページネーション・保存先の切り替え</text>
+              <text x="28" y="146" className={styles.nodeBody}>Web画面配信・APIキー確認・ページネーション・保存先切替</text>
             </g>
 
             <line x1="108" y1="164" x2="108" y2="195" stroke="#595751" strokeWidth="1" markerEnd="url(#arrow-fs)" />
